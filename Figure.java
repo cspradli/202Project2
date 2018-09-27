@@ -27,9 +27,7 @@ public abstract class Figure{
         return gBoundingBox.getHeight() * gBoundingBox.getWidth();
     }
     
-    public void dilate(double factor){
-        //area() = area() * factor;
-    }
+    abstract void dilate(double factor);
 
     public void translate(double horMove, double vertMove){
 
