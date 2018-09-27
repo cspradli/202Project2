@@ -22,10 +22,9 @@ public class Point{
         if (getClass() != obj.getClass()) return false;
         //USE ONCE SUPER CLASS IS MADE
         //if (!super.equals(obj)) return false;
-        //IDK IF TO USE??
         Point ptn = (Point) obj;
-        if (xCord.equals(obj)) return true;
-        if (yCord.equals(obj)) return true;
+        if (!xCord.equals(ptn.xCord)) return false;
+        if (!yCord.equals(ptn.yCord)) return false;
         return true;
     }
 

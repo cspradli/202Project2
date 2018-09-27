@@ -7,5 +7,9 @@ public class Driver{
         System.out.println(pt.hashCode());
         System.out.println(pt1.hashCode());
         System.out.println(pt1.toString());
+
+        BoundingBox bd = new BoundingBox(pt1, 12.4, 17.5);
+        System.out.println(bd.getHeight() + " ");
+        System.out.println(bd.getWidth() + " ");
     }
 }
