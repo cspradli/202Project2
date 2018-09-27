@@ -23,14 +23,12 @@ public abstract class Figure{
         this.color = color;
     }
     
-    public double area(){
-        return gBoundingBox.getHeight() * gBoundingBox.getWidth();
-    }
+    public abstract double area();
     
-    abstract void dilate(double factor);
+    public void dilate(double factor){
+    }
 
     public void translate(double horMove, double vertMove){
-
     }
 
     public static boolean larger(Figure figureOne, Figure figureTwo){
