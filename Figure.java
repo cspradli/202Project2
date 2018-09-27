@@ -61,4 +61,9 @@ public abstract class Figure{
         return hash;
     }
 
+    @Override 
+    public String toString(){
+        return gBoundingBox.toString() + " Visibility: " + visible + " Color: " + color;
+    }    
+
 }
