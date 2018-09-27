@@ -23,11 +23,9 @@ public class Point{
         //USE ONCE SUPER CLASS IS MADE
         //if (!super.equals(obj)) return false;
         //IDK IF TO USE??
-        //Point ptn = (Point) obj;
+        Point ptn = (Point) obj;
         if (xCord.equals(obj)) return true;
-        System.out.println("this far5");
         if (yCord.equals(obj)) return true;
-        System.out.println("this far6");
         return true;
     }
 
