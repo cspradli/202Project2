@@ -27,8 +27,23 @@ public class BoundingBox{
         //USE ONCE SUPER CLASS IS MADE
         //if (!super.equals(obj)) return false;
         BoundingBox bdb = (BoundingBox) obj;
+        if(!upLeft.equals(bdb.upLeft)) return false;
         if (!width.equals(bdb.width)) return false;
         if (!height.equals(bdb.height)) return false;
         return true;
+    }
+
+    @Override
+    public int hashCode(){
+        int hash = 13;
+        hash = 19 * hash + upLeft.hashCode();
+        hash = 19 * hash + Double.valueOf(width).hashCode();
+        hash = 19 * hash + Double.valueOf(height).hashCode();
+        return hash;
+    }
+
+    @Override
+    public String toString(){
+        return "Point: " + upLeft.toString() + " Width:  " + width + " Height: " + height;
     }
 }
