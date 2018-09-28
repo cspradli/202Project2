@@ -3,7 +3,7 @@ import java.awt.Color;
 public class Rectangle extends Figure{
     boolean vis;
     Point pt;
-    public Rectangle( Color color, double xCord, double yCord, double width, double height){
+    public Rectangle(Color color, double xCord, double yCord, double width, double height){
        vis = true;
        BoundingBox bd = new BoundingBox(pt, width, height);
        Point pt = new Point(xCord, yCord);

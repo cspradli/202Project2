@@ -21,4 +21,17 @@ public class Square extends Rectangle{
         if (!Double.valueOf(sideLength).equals(rct.sideLength)) return false;
         return true;
     }
+
+    @Override
+    public int hashCode(){
+        int hash = 23;
+        hash = 37 * hash + super.hashCode();
+        hash = 37 * hash + Double.valueOf(sideLength).hashCode();
+        return hash;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + " Length of Side: " + sideLength;
+    }
 }
