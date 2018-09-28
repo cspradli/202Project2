@@ -2,7 +2,7 @@ import java.awt.Color;
 
 public class Square extends Rectangle{
     private double sideLength;
-    public Square(Double xCord, Double yCord, Double sideLength, Color color, boolean visible){
+    public Square(Color color, Double xCord, Double yCord, Double sideLength){
         super(color, xCord, yCord, sideLength, sideLength);
         this.sideLength = sideLength;
     }

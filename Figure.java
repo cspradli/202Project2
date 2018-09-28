@@ -5,7 +5,10 @@ public abstract class Figure{
      boolean visible;
      Color color;
 
-    public Figure(){
+    public Figure(BoundingBox gBoundingBox, boolean visible, Color color){
+        this.gBoundingBox = gBoundingBox;
+        this.visible = visible;
+        this.color = color;
     }
 
     public void makeVisible(){

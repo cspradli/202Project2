@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 public class Driver{
     public static void main(String[] args) {
         Point pt = new Point(43.1, 45.75);
@@ -16,6 +18,8 @@ public class Driver{
         System.out.println(bd.hashCode());
         System.out.println(bd1.hashCode());
         System.out.println(bd.toString());
-
+        Color BLACK = new Color(12);
+        Rectangle rect = new Rectangle(bd1, true, BLACK, 43, 44, 4, 4);
+        System.out.println(rect.toString());
     }
 }

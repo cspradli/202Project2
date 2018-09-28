@@ -4,7 +4,12 @@ import java.lang.Math;
 public class Ellipse extends Figure{
     double majorAx;
     double minorAx;
-    public Ellipse(double xCords, double yCords, double majorAx, double minorAx, Color color){
+
+    public Ellipse(double xCord, double yCord, double majorAx, double minorAx, Color color){
+        super(bd, vis, color);
+        boolean vis = true;
+        Point pt = new Point(xCord, yCord);
+        BoundingBox bd = new BoundingBox(pt, majorAx, minorAx);
         this.majorAx = majorAx;
         this.minorAx = minorAx;
     }
@@ -12,5 +17,31 @@ public class Ellipse extends Figure{
     @Override
     public double area(){
         return majorAx * minorAx * Math.PI;
+    }
+
+    @Override
+    public boolean equals(Object obj) {
+        if (this == obj) return true;
+        if (obj == null) return false;
+        if (getClass() != obj.getClass()) return false;
+        if (!super.equals(obj)) return false;
+        Ellipse ell = (Ellipse) obj;
+        if(!Double.valueOf(majorAx).equals(ell.majorAx)) return false;
+        if(!Double.valueOf(minorAx).equals(ell.minorAx)) return false;
+        return true;
+    }
+
+    @Override
+    public int hashCode(){
+        int hash = 7;
+        hash = 11 * hash + super.hashCode();
+        hash = 11 * hash + Double.valueOf(majorAx).hashCode();
+        hash = 11 * hash + Double.valueOf(minorAx).hashCode();
+        return hash;
+    }
+
+    @Override
+    public String toString(){
+        return super.toString() + " Major Axes: " + majorAx + " Minor Axes: " + minorAx;
     }
 }
