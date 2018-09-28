@@ -1,14 +1,11 @@
 import java.awt.Color;
 
 public abstract class Figure{
-     BoundingBox gBoundingBox = null;
-     Boolean visible = false;
-     Color color = null;
+     BoundingBox gBoundingBox;
+     boolean visible;
+     Color color;
 
-    public Figure(BoundingBox gBoundingBox, boolean visible, Color color){
-        this.gBoundingBox = gBoundingBox;
-        this.visible = visible;
-        this.color = color;
+    public Figure(){
     }
 
     public void makeVisible(){
@@ -52,7 +49,7 @@ public abstract class Figure{
     public int hashCode(){
         int hash = 7;
         hash = 23 * hash + gBoundingBox.hashCode();
-        hash = 23 * hash + visible.hashCode();
+        hash = 23 * hash + Boolean.valueOf(visible).hashCode();
         hash = 23 * hash + color.hashCode();
         return hash;
     }

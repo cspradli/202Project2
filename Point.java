@@ -1,6 +1,6 @@
 public class Point{
-    private final Double xCord;
-    private final Double yCord;
+    private final double xCord;
+    private final double yCord;
 
     public Point(double xCord, double yCord){
         this.xCord = xCord;
@@ -20,11 +20,9 @@ public class Point{
         if (this == obj) return true;
         if (obj == null) return false;
         if (getClass() != obj.getClass()) return false;
-        //USE ONCE SUPER CLASS IS MADE
-        //if (!super.equals(obj)) return false;
         Point ptn = (Point) obj;
-        if (!xCord.equals(ptn.xCord)) return false;
-        if (!yCord.equals(ptn.yCord)) return false;
+        if(!Double.valueOf(xCord).equals(ptn.xCord)) return false;
+        if(!Double.valueOf(yCord).equals(ptn.yCord)) return false;
         return true;
     }
 

@@ -1,7 +1,7 @@
 public class BoundingBox{
     private Point upLeft = null;
-    private Double width = 0.0;
-    private Double  height = 0.0;
+    private double width = 0.0;
+    private double  height = 0.0;
 
     public BoundingBox(Point upLeft, double width, double height){
         this.upLeft = upLeft;
@@ -24,12 +24,10 @@ public class BoundingBox{
         if (this == obj) return true;
         if (obj == null) return false;
         if (getClass() != obj.getClass()) return false;
-        //USE ONCE SUPER CLASS IS MADE
-        //if (!super.equals(obj)) return false;
         BoundingBox bdb = (BoundingBox) obj;
         if(!upLeft.equals(bdb.upLeft)) return false;
-        if (!width.equals(bdb.width)) return false;
-        if (!height.equals(bdb.height)) return false;
+        if(!Double.valueOf(width).equals(bdb.width)) return false;
+        if(!Double.valueOf(height).equals(bdb.height)) return false;
         return true;
     }
 

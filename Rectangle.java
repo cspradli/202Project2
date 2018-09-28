@@ -1,14 +1,18 @@
-public class Rectangle extends Figure{
+import java.awt.Color;
 
-    public Rectangle(boolean visible, Color color, double xCord, double yCord, double width, double height){
-        super(bd, width, height, visible, color);
-        Point pt = new Point(xCord, yCord);
-        BoundingBox bd = new BoundingBox(pt, width, height);
+public class Rectangle extends Figure{
+    boolean vis;
+    Point pt;
+    public Rectangle( Color color, double xCord, double yCord, double width, double height){
+       vis = true;
+       BoundingBox bd = new BoundingBox(pt, width, height);
+       Point pt = new Point(xCord, yCord);
     }
 
     @Override
     public double area(){
-        return pt.xCord * pt.yCord;
+        return super.gBoundingBox.getUpleft().getX() * super.gBoundingBox.getUpleft().getY();
+
     }
 
     @Override
