@@ -2,8 +2,8 @@ import java.awt.Color;
 import java.lang.Math;
 
 public class Ellipse extends Figure{
-    double majorAx;
-    double minorAx;
+    private double majorAx;
+    private double minorAx;
 
     public Ellipse(double xCord, double yCord, double majorAx, double minorAx, Color color){
         super(xCord, yCord, (majorAx*2), (minorAx*2), color);

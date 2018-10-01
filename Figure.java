@@ -1,9 +1,9 @@
 import java.awt.Color;
 
 public abstract class Figure{
-     BoundingBox gBoundingBox;
-     boolean visible;
-     Color color;
+     private BoundingBox gBoundingBox;
+     private boolean visible;
+     private Color color;
 
     public Figure(double xCord, double yCord, double width, double height, Color color){
         Point pt = new Point(xCord, yCord);
