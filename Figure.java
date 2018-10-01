@@ -5,9 +5,10 @@ public abstract class Figure{
      boolean visible;
      Color color;
 
-    public Figure(BoundingBox gBoundingBox, boolean visible, Color color){
-        this.gBoundingBox = gBoundingBox;
-        this.visible = visible;
+    public Figure(double xCord, double yCord, double width, double height, Color color){
+        Point pt = new Point(xCord, yCord);
+        gBoundingBox = new BoundingBox(pt, width, height);
+        visible = true;
         this.color = color;
     }
 
@@ -26,9 +27,19 @@ public abstract class Figure{
     public abstract double area();
     
     public void dilate(double factor){
+        double newW = gBoundingBox.getWidth() * factor;
+        double newH = gBoundingBox.getHeight() * factor;
+        Point pt = gBoundingBox.getUpleft();
+        gBoundingBox = new BoundingBox(pt, newW, newH);
     }
 
     public void translate(double horMove, double vertMove){
+        double width = gBoundingBox.getWidth();
+        double height = gBoundingBox.getHeight();
+        double pY = gBoundingBox.getUpleft().getY() + vertMove;
+        double pX = gBoundingBox.getUpleft().getX() + horMove;
+        Point pt = new Point(pY, pX);
+        gBoundingBox = new BoundingBox(pt, width, height);
     }
 
     public static boolean larger(Figure figureOne, Figure figureTwo){

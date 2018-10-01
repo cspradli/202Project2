@@ -6,10 +6,7 @@ public class Ellipse extends Figure{
     double minorAx;
 
     public Ellipse(double xCord, double yCord, double majorAx, double minorAx, Color color){
-        super(bd, vis, color);
-        boolean vis = true;
-        Point pt = new Point(xCord, yCord);
-        BoundingBox bd = new BoundingBox(pt, majorAx, minorAx);
+        super(xCord, yCord, (majorAx*2), (minorAx*2), color);
         this.majorAx = majorAx;
         this.minorAx = minorAx;
     }
