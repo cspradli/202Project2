@@ -36,6 +36,6 @@ public class Point{
 
     @Override
     public String toString(){
-        return String.format("Point: X Coordinates: %5.8f Y Coordinates: %5.8f\n", xCord, yCord);
+        return "X Coordinates:  "+ xCord+ "  Y Coordinates: "+ yCord +"\n";
     }
 }

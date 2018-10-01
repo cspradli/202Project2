@@ -29,6 +29,6 @@ public class Circle extends Ellipse{
 
     @Override
     public String toString(){
-        return super.toString() + " Radius: " + radius;
+        return super.toString() + "Radius: " + radius;
     }
 }

@@ -70,7 +70,7 @@ public abstract class Figure{
 
     @Override 
     public String toString(){
-        return gBoundingBox.toString() + " Visibility: " + visible + " Color: " + color;
+        return gBoundingBox.toString() + "Visibility: " + visible + " Color: " + color + "\n";
     }    
 
 }

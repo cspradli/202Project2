@@ -42,6 +42,6 @@ public class BoundingBox{
 
     @Override
     public String toString(){
-        return "Point: " + upLeft.toString() + " Width:  " + width + " Height: " + height;
+        return upLeft.toString() + "Width:  " + width + " Height: " + height+ "\n";
     }
 }

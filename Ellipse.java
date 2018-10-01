@@ -39,6 +39,6 @@ public class Ellipse extends Figure{
 
     @Override
     public String toString(){
-        return super.toString() + " Major Axes: " + majorAx + " Minor Axes: " + minorAx;
+        return super.toString() + "Major Axes: " + majorAx + " Minor Axes: " + minorAx + "\n";
     }
 }
