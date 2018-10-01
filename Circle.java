@@ -1,3 +1,5 @@
+import java.awt.Color;
+
 public class Circle extends Ellipse{
     private double radius;
     public Circle(double xCord, double yCord, double radius, Color color){

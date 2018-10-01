@@ -22,7 +22,7 @@ public class Driver{
         System.out.println(ell.gBoundingBox.getUpleft().getX());
 
         Circle crc = new Circle(1.2, 1.2, 3.0, Color.red);
-        System.out.println()
+        System.out.println(crc.hashCode());
 
     }
 }
