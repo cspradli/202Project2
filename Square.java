@@ -1,12 +1,30 @@
+/**
+ * @author Caleb Spradlin
+ * @version Oct 1 2018
+ * Project 2
+ * Subclass of Rectangle, both the width and height are described by the sidelength param
+ */
+
 import java.awt.Color;
 
 public class Square extends Rectangle{
     private double sideLength;
+
+    /**
+     * Constructor for Square
+     * @param color
+     * @param xCord
+     * @param yCord
+     * @param sideLength
+     */
     public Square(Color color, Double xCord, Double yCord, Double sideLength){
         super(color, xCord, yCord, sideLength, sideLength);
         this.sideLength = sideLength;
     }
-
+    /**
+     * Getter for sideLength variable
+     * @return sideLength
+     */
     public double getSide(){
         return sideLength;
     }

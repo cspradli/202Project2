@@ -1,3 +1,10 @@
+/**
+ * @author Caleb Spradlin
+ * @version Oct 1 2018
+ * Project 2
+ * Subclass of Ellipse, a circle is defined by its upper-left point as well as its radius. The width of its bounding box is determined by that radius
+ */
+
 import java.awt.Color;
 
 public class Circle extends Ellipse{
@@ -5,7 +12,10 @@ public class Circle extends Ellipse{
     public Circle(double xCord, double yCord, double radius, Color color){
         super(xCord, yCord, radius, radius, color);
     }
-
+    /**
+     * Getter for double variable radius
+     * @return radius
+     */
     public double getRadius(){
         return radius;
     }

@@ -1,10 +1,25 @@
+/**
+ * @author Caleb Spradlin
+ * @version Oct 1 2018
+ * Project 2
+ * Subclass of figure, Ellipse is a shape defined by its upper-left point as well as its major and minor axes
+ * The width and height of that bounding box is determined by its major and minor axes
+ */
+
 import java.awt.Color;
 import java.lang.Math;
 
 public class Ellipse extends Figure{
     private double majorAx;
     private double minorAx;
-
+    /**
+     * Constructor for Ellipse
+     * @param xCord
+     * @param yCord
+     * @param majorAx
+     * @param minorAx
+     * @param color
+     */
     public Ellipse(double xCord, double yCord, double majorAx, double minorAx, Color color){
         super(xCord, yCord, (majorAx*2), (minorAx*2), color);
         this.majorAx = majorAx;
