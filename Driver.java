@@ -17,11 +17,12 @@ public class Driver{
         Ellipse ell = new Ellipse(32.2, 12.0, 6, 4, Color.CYAN);
         Ellipse ellCPY = new Ellipse(32.2, 12.0, 6, 4, Color.CYAN);
         System.out.println(ell.toString());
-        System.out.println(ell.area());
         System.out.println(ell.equals(ellCPY));
 
         Circle crc = new Circle(1.2, 1.2, 3.0, Color.red);
+        Circle crc2 = new Circle(1.2, 1.2, 3.0, Color.red);
         System.out.println(crc.hashCode());
+        System.out.println(crc2.hashCode());
 
     }
 }

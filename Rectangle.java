@@ -49,6 +49,6 @@ public class Rectangle extends Figure{
 
     @Override
     public String toString(){
-        return super.toString();
+        return "Rectangle: " + super.toString();
     }
 }

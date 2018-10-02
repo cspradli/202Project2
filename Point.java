@@ -65,6 +65,6 @@ public class Point{
      */
     @Override
     public String toString(){
-        return "X Coordinates:  "+ xCord+ "  Y Coordinates: "+ yCord +"\n";
+        return " X Coordinates:  "+ xCord+ "  Y Coordinates: "+ yCord;
     }
 }

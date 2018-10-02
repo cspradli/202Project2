@@ -76,6 +76,6 @@ public class BoundingBox{
      */
     @Override
     public String toString(){
-        return upLeft.toString() + "Width:  " + width + " Height: " + height+ "\n";
+        return upLeft.toString() + " Width:  " + width + " Height: " + height;
     }
 }
